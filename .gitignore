@@ -1,0 +1,38 @@
+
+/__
+
+# node
+/node_modules/*
+!/node_modules/jade-html-loader/
+!/node_modules/jade-html-loader/*
+
+# php
+/vendor
+
+# ruby
+
+# python
+pycache/
+
+# java
+/target
+/build
+/gradle
+/.gradle
+
+# csharp
+/packages
+/obj
+/bin
+
+# frontend
+# ignore /dist for all branches except master
+#/dist 
+/public
+/static
+
+# files
+*.exe
+*.class
+*.suo
+*.gitattributes
