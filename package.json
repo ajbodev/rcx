@@ -1,0 +1,23 @@
+{
+  "scripts": {},
+  "devDependencies": {
+    "app-module-path": "^2.1.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-mung": "^0.4.6",
+    "express-session": "^1.14.2",
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "jade": "^1.11.0",
+    "jasmine": "^2.5.2",
+    "livescript": "^1.5.0",
+    "livescript-loader": "^0.1.6",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {}
+}
