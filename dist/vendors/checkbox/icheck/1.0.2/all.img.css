@@ -1,0 +1,590 @@
+/* iCheck plugin Minimal skin
+----------------------------------- */
+.icheckbox_minimal,
+.iradio_minimal {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAUCAYAAADIpHLKAAAEIUlEQVR4Xu2bT2sTWxiHe2LJzkVcuKuK0NDPIIKQVui+WhFxofgnF7wVEdyJ1aXchU2FSAl0ISroF1BrhaBu/AIJLWSh4kJoC+LGQjg+CYcXGubMn5yDmbmdAw8zZeY8vLzjz7d0ErWxsaHH/CxVLpd7R28+avPmm5ycVL3jzs6OF1+pVPLvs6zNzc0Kh3NQgSNG8AXew0tYD3Ka5xFEqE9rHegbtj56n8hHT0N99MqrD9Ytz2Rs3DgUuCwNsnz7CJ7Vp7WO8wB11D/GhA337rPUPcWhDoehAY+gYwTHYRZq8AP+gTaErVg+pVTfR2/F51If9/V9BKUd0YdYPu7r++h7lM+5f+OQrxRCOE6Z6bAIK0zA7oCg1YP7aiYcH2EOmhblHh/gk/9gxEc4xMf5HNebvurjfI77mpZw7PExJQJ93Cc+zue4z9UX2r8C/C+XUkqnuT6ZGvbJ8QouEIy6hCOYLjyG82bPVIBSfFAHq49AdEF89HHKpb7eNRCf2TvYC/ERjDpYfb1rID72Ovgs/Ut1QPJwKA6r8IBgvEugXYP7Zi8OWeKD2D5CIj7Fcq2Pe8WHA4f0QnwEI7aPe8WHw8Fn6V/aApKHQ5iGg1AfQv/E7J128+W+rAZEpzQcMhlcrhvmoSG/tiSjCw2YH/RBYp/WWnxR9dH7IizBFmyb8+LAFLH65NegBLAnto/eF2EJtmDbnBdt/cvyBNEpnhwSguThECrwxqGE11AZge8hLMAhKJnzB1mvrwBZXDoqHFprlYKQyM8J3ntMQMehgA5MjMB3MUBwNev1FSCrS/sNh/+QJAuH8Nvx5WjRny/3FSDLK3XhGH5yCN/huEMBR+HbCHxPAwSNrNaX1YAokJWicMhkcLlu+AyzDmXMwKcR+O5ADXYMNbib1fqy/CZdpXRySAiGmxzCM/iPdwXLQ/wl6wBcgduDPliGRD6llPii6qP/uxxuGmzveKw+erac9C9Z7Intwx1YHw5L/7L9HkSlLhz2MMjPMXkLv6AKSdd1s3fN1Zf7sv+iUFnCkaaQyDHBG2fN4RLcY4pMJ9h6Ghbh8sCEFR9MJ5ge4tMs1/q4V3w4cEifxMdEiO3jXvHhsPmc+ycByfokSXNIkmI+9XoWnhOSKoQ9pwLcgBdmTytAKT6oQiEkGAUQH9loudTXuwbiY28roE/iIyRVsPp610B87HXwRfdvHFK/zPdC9hWEpGk+MbsK/3K+Yl5idaAIx2AGrsFPOAntEGUTxAd9H2Gw+ghH22d9Jli2idskGOLjPNLHHq++sI+7a/Cy/raPB+P7IyEj8NknCcE4Ycb/GViACdiFr/ABbsFazJ63IZZPs3zWx71hPpkk9DKWj3u9+kCHfWvPC+Vy+a9PDhq/37834vQ8JAf7FAIUFrAxZW9QTk6+/gConSa5HU/GFwAAAABJRU5ErkJggg==) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal {
+    background-position: 0 0;
+}
+    .icheckbox_minimal.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal {
+    background-position: -100px 0;
+}
+    .iradio_minimal.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal,
+    .iradio_minimal {
+        background-image: url(minimal@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* red */
+.icheckbox_minimal-red,
+.iradio_minimal-red {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAUCAYAAADIpHLKAAAEMUlEQVR4Xu2bwWsTWxSHO7Fm5yIu3FWlUCj+CQ9BSCp25yJaEXGh6HsRtA9R3Im1S+nCpkKkBLoQFXTlzloVgrrxDzChhSxUXAhtQNxYCeM34XJKw8zcmdyhM2PnwseMzNyPwxl/PaWTWKurq/ZQNMv6ffOEc4zMt3duOTLf2NiY5Rw7nU4kvkKhEL3PY62trRU5nIEiHFSCz/AWnsEbN6d6Hm74+o68aLv6Bq2P3ofy0VNfH70y8un7J89kaFg5LDBZEopoffKgPX08zCAP0Nb9ZwzZ8Mh9HnWPc6jBAajDfWgrwShMQhW+wxVoaQoI5Pt0crTno7fiM6mP+3o+gtLS9CGQj/t6Pvqu8xn3bxiylUAIxzE1HWZgkQnY7RM0HbivqsLxHsrQ8FBu8wE++QEjPsIhPs7LXG9EVR/nZe5reIRjm48p4erjPvFxXuY+U59v/3LwVy4erp3g8mRq+EyO53COYNQkHO504QGcVXvGXZTigxp0fSZyF8RHH8dN6nOugfjU3v5eiI9g1MDT51wD8bHXwKfpXyIDkoXD4rAEswTjdQjtCtxVe3HIEh8E9hES8dFPy7Q+7hVfz7HVC/ERjMA+7hUfDo0vfP8SF5AsHEIJ9kFtAP1Dtbdk5st8aQ2IndBwyGQwua6Ygrr82hKOLtRhqt8HoX1MEfHp6qP3eZiHddhQ5/m+KeLpk1+DQsCewD56n4d5WIcNdZ7X9C+VE8TWhSOJIZFw6CnCskEJL6EYg+8eTMN+KKjz2bTXl4M0LlsXDn76WQkIifw7xHuPEWgbFNCGkRh8510El9NeXw7Suux4w6EPSbhwCL8MX47mzX2ZL+UBERIXjsEnh/ANRg0KOARfY/A9chHU01pfWgNigawEhUMmg8l1xUeYNChjAj7E4LsFVegoqnA7rfWl+U26ldDJISHQTA4dj2GOdwULA/wlaw9cghv9PliAbsj3SeLT1Uf/Nzn8r3Bd7PH00bOFsH/JYk9gH27X+nD49i8HaVyWJhyxhyR8OIRX8BMqEHb9p/aumPoyX/pfFFracMQfEjmGeONsc7gAd5gipRBbj8MMXOybsOKDUojpIT56bJvWx73i6zm2+iQ+JkJgH/eKD4eXz7h/EpC0T5IkhyQs6lOvp+EJIamA33PKwVV4qvY0XZTigwrkfIKRA/ERjqZJfc41EB97my59Eh8hqYCnz7kG4mOvgU/fv2FI/FLfC9lVEJKG+sTsElzjfFG9xGpDHg7DBPwLP+Co5uPuDRAf9HyEwdNHOFpR1qeC5TVxGwRDfJxrfeyJ1Of3cXcbIlk77ePBRP2RkBh83pOEYPyjxv8pmIYR2IQv8A6uw0rAnrcgkI9w2FHWx71+Ppkk9DKQj3uD+oz653yjMLJU8MWmHZ8cNH63f2/E6HkQhF3dPwLkF7Ahy7a9gpiRka0/gX4qhXN3m0gAAAAASUVORK5CYII=) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-red {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-red.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-red.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-red.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-red.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-red {
+    background-position: -100px 0;
+}
+    .iradio_minimal-red.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-red.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-red.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-red.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-red,
+    .iradio_minimal-red {
+        background-image: url(red@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* green */
+.icheckbox_minimal-green,
+.iradio_minimal-green {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAUCAYAAADIpHLKAAAEPklEQVR4Xu2bTWsTXxSHO1G6cxEX7qpSqHTvQhBBSCt0H18QK2jxJYJWRBRc/PFlI6gLaYVICXZRX0C/gNoqBHWhXyAhhSxUFNwE5L+xEMYnw+XUhpl7Z3oHZ8bOwMMEcufhcKa/nklm4rRaLXcghu3Rx12OEojPEmdqTys238jIiFdfp9OJxVcsFuP3BWzLy8sldkegBNuV4DO8hefwxud86ArQ+m5PuuIzY66P3kfy0VOtj15Z+sz9+35it7ffrBwO2GyumOP3Sfj84GSGOYGu6Y8xYsNj9wXUPcquCtugBvehrQTDMAEz8APOQdNQQCjftceO56O34rOpj3Wej6A0DX0I5WOd56PvJp9V/yQgOemDcOxX0+EGzDEBu32CRg/WzahwvIcy1AOUa3yAT/7BiI9wiI/XZd6vx1Ufr8usqweEY42PKeHrY534eF1mna1P278C/JMbJ9dNcXkyNTST4wUcIxhV6GpUXXgAR9Uxoz5K8UEVupqJ3AXx0cdRm/p674H41LH9vRAfwahCoK/3HoiPYy18mv6lNiB5OBx283CLYCxF0C7CTXUsDtnEB6F9hER89NOxrY+14vMcq70QH8EI7WOt+HBofBb9S1NA8nAIY7AFquvQP1THjtn5cl9WP4O44KQwHDIZ5AN75HAIh6Emly3R6EJNOZZAfBDFJ5db9FR8uvpYN8juLkyCAwtwBcfKn5dbTA9fn+4ySHe5RU9D+VjnWx+saPqXyQnipi8c5hBIOMyU4JVFCS+hlIDvDkzDViiq17eyWl/WL7FcUzi4hnaSDIkpHJpJMwRtiwLaMJSA77iP4HR268v+ZxA32XCYQxItHMIvy5ujg/a+3JfxgAipC8f6J4fwDYYtCtgBXxPwLfgIalmtL6sB0UyGRMMhk8HmfcUnmLAoYxw+JOC7CjPQUczAf1mtL8t30p2UTg4JgXZymHkC97hXMLuOb7I2wSm43O+DWehGvJ8kPlN96tuqi4qgezyBPno2G/WbLI4J7cPtWx8OTf+ye4nl6MORfEgsntV6Df9DBaJuZ9Wxi7a+3Jf9zyCOMRzJh0T2Ee44u+xOwnWmyFiEQw/ADZjqm7Dig7EI00N89Ni1rY+14vMcq30SHxMhtI+14sOh8dn1TwKS9UmS5pBERT31egieEpIK6M5TAc7DM3VMw0cpPqhAQROMAoiPcDRs6uu9B+Lj2IZPn8RHSCpQ0ASjAOLjWAufpn9Z+gyifheyoSAkdfXE7Dxc4PWcuonVhkHYCeNwBn7CPsPj7nUQH3g+whDoIxzNOOtTwQqauHWCIT5eG30cE6tP97i7C7Fsf9vHiYn7eagEfMGThGDsVeP/IEzDEKzAF3gHl2AxZM+bEMpHONw462OtzieThF6G8rE2rM+qf71fFA7E9IvCRCYHjd/ovxuxOh8EYSO3T77FCvpFoeMG/qPIycm3349GJTBK7WVcAAAAAElFTkSuQmCC) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-green {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-green.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-green.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-green.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-green.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-green {
+    background-position: -100px 0;
+}
+    .iradio_minimal-green.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-green.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-green.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-green.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-green,
+    .iradio_minimal-green {
+        background-image: url(green@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* blue */
+.icheckbox_minimal-blue,
+.iradio_minimal-blue {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAUCAYAAADIpHLKAAAEM0lEQVR4Xu2bwWsTTRiHu1Vyk4948Fb9KBR6Vk8iCEkF79WKiKBStYJWRNCTqL0pHjQVIiXQg6j4ff+AWhWCehHxmtBCDioKggbFi4WwPlmGtzTsZHY6i7trd+Fht+zMw8u7+XWS7MZbXFz0B2LYdtbeeUogPke8t5PbY/ONjIwE9bXb7Vh8xWIxfp9mW1paKrE7CCXYqgTv4QX8B89Drke/Avr6vl8/KD4z5vrovZWPnvb10StHn7l/n4/uCPYblcMDl80Xc/w+CV8YXMwoF9A3vRgtGx67T1P3KLsqbIEa3IKWEgzDPqjAFzgNTUMBkXz/XHoU+Oit+FzqY1zgIyhNQx8i+RgX+Oi7yefUPwlITvogHHvU6nAV5lgBOz2CRhfGVVQ4XsE41DXKVT7AJ/9gxEc4xMfxOOfrcdXH8Tjj6ppwrPKxSoT6GCc+jscZ5+rr279B+Cs3Lq6f5vpk1dCvHP/DYYJRlXCE04E7cEjNGQ1Rig+qoPURiA6Ijz6OutTXPQfiU3N7eyE+glEFra97DsTHXEufuX/pDkgeDo/dPMwQjGcW2gW4pubikE18ENlHSMRHPz3X+hgrvsCx0gvxEYzIPsaKD4fBZ9+/1AUkD4dQhk1QXYP+rppbdvPlvqwGxE9pOGRlcDmvmICavG2xowM1mOj1gbWPVUR8pvrofQFuw1f4po4LPauI1idvgyxgTmQfvS/AbfgK39RxQde/LK8gvikcaQyJhMNMCZ44lPAYSgn4bsA0bIaiOp7Jan1Zf4vlm8LBfz8vBSGRvy3uewxBy6GAFgwl4DsSIjiR3fqy/xnETzYc5pDYhUP45XhztODuy30ZD4iQunBYrBw6PsGwQwHb4GMCvnshglpW68tqQDyNIOlwyMrgcl7xBvY5lDEGrxPwXYQKtBUVuJzV+rJ8J91L6cohITCsHCbuw03uFcyu4ZusDTAJF3p9MAsdy/tJ4jPVR/+X2Z1T6O7xaH30bNb2myzmRPbhDq0Ph6Z/2X6L5RnCkXhI7MMhPIWfMAW22yk1d8HVl/uy/xnEM4Yj+ZDI3uKOs8/uGFxhFSlbTN0LV+F4zworPihbrB7io8e+a32MFV/gWOmT+FgRIvsYKz4cOp9z/yQgWV9J0hwSW9RTrwfgASGZgn7XaRDOwEM1pxGiFB9MAT5tMAZBfISj4VJf9xyIj7mNkD6Jj5BMgdbXPQfiY66DT9+/TH0GUb8LWVcQkrp6YnYeznI8p25itaAA/8IYnIQfsNvwuHsdxAeBjzBofYSjGWd9Kli6FbdOMMTHsdHHnFh9/R539yGW7U/7uDBxPxKSgE+/khCMXWr53w/TMATL8AFewnlYiNjzJkTyEQ4/zvoYa/QRkia9jORjbFSfU/+6vygciOkXhYmsHDR+vf9uxOl6EIT13D75Fkv3i0LP93VBzMnJt98eaizLhOEn0QAAAABJRU5ErkJggg==) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-blue {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-blue.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-blue.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-blue.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-blue.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-blue {
+    background-position: -100px 0;
+}
+    .iradio_minimal-blue.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-blue.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-blue.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-blue.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-blue,
+    .iradio_minimal-blue {
+        background-image: url(blue@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* aero */
+.icheckbox_minimal-aero,
+.iradio_minimal-aero {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(aero.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-aero {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-aero.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-aero.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-aero.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-aero.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-aero {
+    background-position: -100px 0;
+}
+    .iradio_minimal-aero.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-aero.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-aero.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-aero.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-aero,
+    .iradio_minimal-aero {
+        background-image: url(aero@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* grey */
+.icheckbox_minimal-grey,
+.iradio_minimal-grey {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(grey.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-grey {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-grey.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-grey.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-grey.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-grey.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-grey {
+    background-position: -100px 0;
+}
+    .iradio_minimal-grey.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-grey.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-grey.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-grey.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-grey,
+    .iradio_minimal-grey {
+        background-image: url(grey@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* orange */
+.icheckbox_minimal-orange,
+.iradio_minimal-orange {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAUCAYAAADIpHLKAAAEOklEQVR4Xu2bTYsURxyHrVXm5mFy8LYmLIzs3ZsEhNkN7H2MIYjgS14mkCgSCH0JMZ6akIPuCiPLyB6CCvoF1FVhUC9+gV12YQ8mGBDWgZBLFobKM2NRxQ5dXV1UY0/vdsFDt3TVw5//+Nuip3vExsaGPJDDaNw+JpQgFx+IzYsbufkajcaovn6/n4uvXq/n77OMzc3NJocvoAlHleA1PIP78DTh80grIN0XS+1z466P3nv56Gmqj14F+tz9+/vc8dHxkHIICBgmFPn7TPgSiWWWD1C6/jN6Njx3n6XuWQ4dOAJduA5bSjADC7AIb+E7WHcUkM0Xife+WGpfSH3MG/kIyrqjD5l8zBv56LvLF9o/AlKNiYRwnFS7w1VYZgccjAnWhjBvUYXjBbSgZ1Hu8sHA/IExPsKhfZy3uN7Lqz7OW8zrWcKxy8cukehjnvZx3mJeqC+1f1OwN0ck5ARXZ3YN+87xAM4QjA4MUlQDuAlfqjWzCUrtgw7YfbEcgPFFYjakvuE10D61drwX2kcwOmD1Da+B9rHW0+fu32QHpAqH4LAC1wjGEw/tKvyq1uLQQ/sguy+WxhcJEVofc7Vv5DC90D6CkdnHXO3D4fD596/ogFThsDMHh6EDvuOWWjsX5qt8ZQ2IDAhHkTuD+7rhNHT1PYcfA+jC6XEf+PtiqX3O+iJRgxuwDe/UeW1sF7H69D2CB6zJ7KP3NbgB2/BOndds/SvzDiK9w1F8SEw43DThUUAJD6FZgO83uAQfQV2dXytrfWW/B5HOcMRSFB8S82+P5x7TsBVQwBZMF+A7myD4urz1lf8eRBYbDndIvMJh+C/w4Wgt3Ff59spN+sSFw2PnsPEGZgIK+Bj+KsD3R4KgW9b6yhoQYREUHA6zM4RcV7yChYAy5uFlAb6fYBH6ikX4uaz1lflJunDtHEWHxLFzuLgDv/OsYMn3myw4CF/Bj+M+WAI/XyS0z1lfLHc4XFbYnvFYffRsyfebLNZk9uFOrA+HpX/lvgcRjnAUHpKAd7Uew7/QBt/xrVq7GuqrfOW/BxGucBQfEnP0eOIsOZyHX9hF5jyWfgZX4cLYDqt9kN0XCeOLpQytj7naN3KYPmkfO0JmH3O1D4fNF9o/E5Cy7ySTHBJf1Fuvn8NdQtKGtM9pCr6He2rNWoJS+6ANdl8kpsD4YrkWUt/wGmgfa9cS+qR9hKQNVt/wGmgfawN89v6V6h5E/S4kkQbsxUFIeuqN2RX4gfNl9RBrC2rwCczDN/APfOp43b0H2gfvfZGw+2K5nmd9Kli2HbdHMLSPc6ePNbn60l53l5DL+NA+Ppi8XwkpwGffSQjGCbX9n4JLMA078Cc8hyuwmrHn65DNF0uZZ33MTfGZnYReZvIxN6svqH/DXxQeyOkXhR9w5zDQ+P3+u5GwzyOW+7h75lss2y8KhZS2BlVUVON/fhQUztV/WkUAAAAASUVORK5CYII=) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-orange {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-orange.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-orange.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-orange.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-orange.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-orange {
+    background-position: -100px 0;
+}
+    .iradio_minimal-orange.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-orange.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-orange.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-orange.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-orange,
+    .iradio_minimal-orange {
+        background-image: url(orange@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* yellow */
+.icheckbox_minimal-yellow,
+.iradio_minimal-yellow {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(yellow.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-yellow {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-yellow.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-yellow.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-yellow.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-yellow.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-yellow {
+    background-position: -100px 0;
+}
+    .iradio_minimal-yellow.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-yellow.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-yellow.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-yellow.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-yellow,
+    .iradio_minimal-yellow {
+        background-image: url(yellow@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* pink */
+.icheckbox_minimal-pink,
+.iradio_minimal-pink {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(pink.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-pink {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-pink.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-pink.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-pink.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-pink.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-pink {
+    background-position: -100px 0;
+}
+    .iradio_minimal-pink.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-pink.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-pink.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-pink.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-pink,
+    .iradio_minimal-pink {
+        background-image: url(pink@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
+
+/* purple */
+.icheckbox_minimal-purple,
+.iradio_minimal-purple {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(purple.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal-purple {
+    background-position: 0 0;
+}
+    .icheckbox_minimal-purple.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal-purple.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal-purple.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal-purple.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal-purple {
+    background-position: -100px 0;
+}
+    .iradio_minimal-purple.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal-purple.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal-purple.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal-purple.checked.disabled {
+        background-position: -180px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal-purple,
+    .iradio_minimal-purple {
+        background-image: url(purple@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}
