@@ -1,0 +1,22 @@
+doctype html
+html
+  - var meta           = global._meta['app'];
+  - var version        = meta.version        ? ('-' + meta.version) : '';
+  - var version_vendor = meta.version_vendor ? ('-' + meta.version_vendor) : '';
+  - var root           = meta.root           ? (meta.root) : '';
+  head
+    meta(charset='utf-8')
+    title RCX
+    | 
+    | <!-- app#{version}.html -->
+    link(href='#{root}lib/vendors#{version_vendor}.css', rel='stylesheet')
+    link(href='#{root}lib/bundle#{version}.css', rel='stylesheet')
+  body.skin-black-light.sidebar-mini
+    .wrapper
+      .content-wrapper(style='min-height: 906px;')
+        #app
+    script(src='#{root}lib/vendors#{version_vendor}.js')
+    script var app = {component: {}, meta: {}};
+    script(src='#{root}lib/bundle#{version}.js')
+    script app.component.init();
+    iframe(id='_form-target', name='_form-target', style='visibility:hidden;display:none')

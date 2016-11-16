@@ -1,0 +1,95 @@
+
+mixin _Admin_Tab(o)
+  //- @params  o:{ ?class:S }
+  #tab__admin.tab-pane.fade.in(class='#{o.class || ""}')
+    .content__admin__top
+      .content__admin__top__left
+        button.btn.btn-success#content__admin__select__create(type='button', data-toggle='modal', data-target='#content__admin__select__create__modal')
+          i.fa.fa-plus
+        | &nbsp&nbsp
+        button#content__admin__select__refresh.btn.btn-default(type='button')
+          i.fa.fa-refresh
+      .content__admin__top__mid
+        select#content__admin__select
+      .content__admin__top__right__aux
+        .content__admin__top__right
+          //-button#content__admin__select__clone.btn.btn-default(type='button')
+            i.fa.fa-code-fork
+          button#content__admin__select__edit.btn.btn-default(type='button', data-toggle='modal', data-target='#content__admin__select__edit__modal')
+            i.fa.fa-edit
+          | &nbsp&nbsp
+          button#content__admin__select__destroy.btn.btn-danger(type='button')
+            i.fa.fa-trash
+    .row.table-responsive#content__admin(style='height: 606px;')
+    .content__admin__bottom
+      .content__admin__bottom__import-export
+        button.btn.btn-btn#content__admin__export(type='button')
+          i.fa.fa-download
+        | &nbsp&nbsp
+        span.btn.btn-default.btn-file
+          i.fa.fa-upload
+          input#content__admin__import(type='file')
+      .content__admin__bottom__format
+        select#content__admin__format
+      .content__admin__bottom__space
+      .content__admin__bottom__view
+        select#content__admin__view
+    +_Admin_Tab_Create({  })
+    +_Admin_Tab_Edit({  })
+
+mixin _Admin_Tab_Create(o)
+  .row
+    .modal.fade(id='content__admin__select__create__modal', tabindex='-1', role='dialog', aria-labelledby='123Label', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-body
+            form.form-horizontal
+              .form-group
+                label.col-sm-2.control-label(for='content__admin__select__create__text') Data
+                .col-sm-10
+                  input.form-control(type='text', id='content__admin__select__create__text')
+              .form-group
+                label.col-sm-2.control-label(for='content__admin__select__create__button') Add
+                .col-sm-10
+                  button.btn.btn-success(type='button', id='content__admin__select__create__button')
+                    i.fa.fa-plus
+              .form-group
+                label.col-sm-2.control-label Template
+                .col-sm-10
+                  select#content__admin__sample
+              .form-group
+                label.col-sm-2.control-label Store
+                .col-sm-10
+                  select#content__admin__src
+
+mixin _Admin_Tab_Edit(o)
+  .row
+    .modal.fade(id='content__admin__select__edit__modal', tabindex='-1', role='dialog', aria-labelledby='456Label', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-body
+            form.form-horizontal
+              .content__admin__top__select__edit
+                .content__admin__top__select__edit__left
+                  label Data
+                .content__admin__top__select__edit__mid
+                  input.form-control(type='text', id='content__admin__select__edit__text')
+                .content__admin__top__select__edit__right
+                  button.btn.btn-default(type='button', id='content__admin__select__edit__button')
+                    i.fa.fa-save
+              .content__admin__top__select__clone
+                .content__admin__top__select__clone__left
+                  label Clone
+                .content__admin__top__select__clone__mid
+                  button.btn.btn-success(type='button', id='content__admin__select__clone__button', style='width: 42.5px;')
+                    i.fa.fa-code-fork
+                .content__admin__top__select__clone__right
+                  input.form-control(type='text', id='content__admin__select__clone__text', disabled)
+              .content__admin__top__select__replace
+                .content__admin__top__select__replace__left
+                  label Replace
+                .content__admin__top__select__replace__mid
+                  button.btn.btn-warning(type='button', id='content__admin__select__replace__button')
+                    i.fa.fa-paste
+                .content__admin__top__select__replace__right
+                  input.form-control(type='text', id='content__admin__select__replace__text', disabled)

@@ -1,0 +1,70 @@
+
+mixin _Option_Tab_Content_Run(o)
+  //- @params  o:{ scripts:{} }
+  #tab__option__run.tab-pane.fade.in
+    .table-responsive(style='height: 607px')
+      table.table.table-bordered
+        tbody
+          tr
+            th(style='width: 10px;') Status
+            th(style='min-width: 900px;') Run Mode
+          tr
+            td
+              input#content__option__run__mode__front.content__icheck(type='radio', name='run__mode', checked='checked', value='front')
+            td
+              | Always run the front file in the HTML tab
+          tr
+            td
+              input#content__option__run__mode__index.content__icheck(type='radio', name='run__mode', value='index')
+            td
+              | Always run the 'index' file in the HTML tab
+      table.table.table-bordered
+        tbody
+          tr
+            th(style='width: 10px;') Status
+            th Vendor
+            th Extension
+            th(style='min-width: 600px;') URL
+          //- Default
+          //- Markdown
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'Marked', id: 'md' , ext: 'md', 
+            value: o.scripts['_root'] + o.scripts['marked'] })
+          //- Template
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'Jade', id: 'jade' , ext: 'jade', 
+            value: o.scripts['_root'] + o.scripts['jade'] })
+          //- Preprocessor
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'Less', id: 'less' , ext: 'less', 
+            value: o.scripts['_root'] + o.scripts['less'] })
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'Sass', id: 'sass' , ext: 'sass', 
+            value: o.scripts['_root'] + o.scripts['sass'] })
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'Stylus', id: 'styl' , ext: 'styl', 
+            value: o.scripts['_root'] + o.scripts['stylus'] })
+          //- Transpiler
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'Babel', id: 'babel' , ext: 'babel.js', 
+            value: o.scripts['_root'] + o.scripts['babel.js'] })
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'TypeScript', id: 'ts' , ext: 'ts', 
+            value: o.scripts['_root'] + o.scripts['typescript'] })
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'CoffeeScript', id: 'cs' , ext: 'cs', 
+            value: o.scripts['_root'] + o.scripts['coffeescript'] })
+          +_Option_Tab_Content_Run_Item({ 
+            title: 'LiveScript', id: 'ls' , ext: 'ls', 
+            value: o.scripts['_root'] + o.scripts['livescript'] })
+
+mixin _Option_Tab_Content_Run_Item(o)
+  //- @params  o:{ title:S, id:S, ext:S, value:S }
+  tr
+    td
+      input.content__icheck(id='content__option__run__#{o.id}', type='checkbox')
+    td #{o.title}
+    td(id='content__option__run__#{o.id}__ext') #{o.ext}
+    td
+      input(id='content__option__run__#{o.id}__src', class='form-control',
+        value='#{o.value}')

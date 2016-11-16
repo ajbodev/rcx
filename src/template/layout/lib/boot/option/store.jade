@@ -1,0 +1,23 @@
+
+mixin _Option_Tab_Content_Store(o)
+  #tab__option__store.tab-pane.fade.in.active
+    .table-responsive(style='height: 607px;')
+      table.table.table-bordered
+        tbody
+          tr
+            th 
+            th(style='min-width: 250px;') Store
+            th(style='min-width: 400px;') DB / URL
+            th(style='min-width: 200px;') Table
+            th(style='min-width: 400px;') Others
+          tr
+            td Data
+            td
+              select#content__option__store__data
+            td
+              input#content__option__store__data__db_url.form-control(value='')
+            td
+              input#content__option__store__data__table.form-control(value='')
+            td
+              textarea#content__option__store__data__others.form-control(value='', rows=7)
+              //-input#content__option__store__data__others.form-control(value='')

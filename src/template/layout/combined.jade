@@ -1,0 +1,22 @@
+
+include lib.jade
+
+mixin All_Menu(o)
+  //- 
+  +_Menu_Tab_Item({ id: 'input__html', title: 'HTML',    fa: 'html5', class: 'active' })
+  +_Menu_Tab_Item({ id: 'input__css',  title: 'CSS',     fa: 'css3' })
+  +_Menu_Tab_Item({ id: 'input__js',   title: 'JS',      fa: 'jsfiddle' })
+  +_Menu_Tab_Item({ id: 'admin',       title: 'Data',    fa: 'database' })
+  +_Menu_Tab_Item({ id: 'output',      title: 'Output',  fa: 'desktop' })
+  +_Menu_Tab_Item({ id: 'option',      title: 'Options', fa: 'cogs' })
+
+mixin All_Content(o)
+  //- 
+  +_Input_Tab({ id: 'html', class: 'active' })
+  +_Input_Tab({ id: 'css' })
+  +_Input_Tab({ id: 'js'  })
+  +_Admin_Tab({  })
+  +_Output_Tab({ })
+  +_Option_Tab({ scripts: o.scripts })
+
++Layout({ layout: 'combined' })

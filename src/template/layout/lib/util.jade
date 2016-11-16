@@ -1,0 +1,21 @@
+
+mixin _Util_Tab_Buttons(o)
+  //- @params  o{ id:S }
+  br
+  //-.content__input__bottom
+  .content__input__bottom
+    .content__input__bottom__import-export
+      button.btn.btn-btn(type='button', id='content__#{o.id}__export')
+        i.fa.fa-download
+      | &nbsp&nbsp
+      span.btn.btn-default.btn-file
+        i.fa.fa-upload
+        input(type='file', id='content__#{o.id}__import')
+    .content__input__bottom__format
+      select(id='content__#{o.id}__format')
+    .content__input__bottom__lint
+      | &nbsp&nbsp&nbsp
+      input.content__icheck(type='checkbox', id='content__#{o.id}__lint')
+      | &nbsp&nbspLint
+    .content__input__bottom__mode
+      select(id='content__#{o.id}__mode')

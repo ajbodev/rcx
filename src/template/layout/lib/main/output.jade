@@ -1,0 +1,32 @@
+
+mixin _Output_Tab(o)
+  //- @params  o:{ ?class:S }
+  #tab__output.tab-pane.fade.in(class='#{o.class || ""}')
+    .content__output__top
+      .content__output__top__urlhash-button#content__output__index__button__holder
+        button.btn.btn-default#content__output__index__urlhash__button(type='button')
+          i.fa.fa-hashtag
+      .content__output__top__urlhash#content__output__index__select__holder
+        select#content__output__index__urlhash
+      .content__output__top__ext
+        select#content__output__index__ext
+    .row
+      .col-md-12.col-sm-12.col-xs-12
+        #content__output__index__holder
+          iframe#content__output__index__frame
+    br
+    .content__output__bottom
+      .content__output__bottom__import-export
+        button.btn.btn-btn#content__output__index__export(type='button')
+          i.fa.fa-download
+        | &nbsp&nbsp
+        span.btn.btn-default.btn-file
+          i.fa.fa-upload
+          input#content__output__index__import(type='file')
+      .content__output__bottom__result
+        select#content__output__index__result
+      .content__output__bottom__lint
+      .content__output__bottom__mode
+        select#content__output__index__mode
+    .row
+      .col-md-12.col-sm-12.col-xs-12

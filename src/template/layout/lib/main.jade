@@ -1,0 +1,25 @@
+
+include main/input.jade
+include main/output.jade
+
+mixin _Main_Buttons(o)
+  .col-xs-4.col-sm-3.col-md-2
+    button#content__run.btn.btn-primary
+      i.fa.fa-play
+    | &nbsp&nbsp
+    input#content__run__auto.content__icheck(type='checkbox')
+    | &nbsp&nbspAutorun
+  .col-xs-4.col-sm-3.col-md-2
+    button#content__save.btn.btn-default
+      i.fa.fa-save
+    | &nbsp&nbsp
+    input#content__save__auto.content__icheck(type='checkbox')
+    | &nbsp&nbspAutosave
+  .col-xs-4.col-sm-3.col-md-2
+    button#content__load.btn.btn-btn
+      i.fa.fa-repeat
+    | &nbsp&nbsp
+    input#content__load__auto.content__icheck(type='checkbox')
+    | &nbsp&nbspAutoload
+  .col-xs-12.col-sm-3.col-md-6#content__layout__holder
+    select#content__layout__select

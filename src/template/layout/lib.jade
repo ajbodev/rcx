@@ -1,0 +1,166 @@
+
+include lib/boot.jade
+include lib/main.jade
+include lib/admin.jade
+include lib/util.jade
+
+mixin Layout(o)
+  //- @params  o:{ layout:S }
+  - var version = global._meta['app'].version;
+  - var scripts = global._meta['app'].scripts;
+  +_Header({ 
+    title: 'RCX', fa: 'codepen', href: '#/', 
+    version: version, Header_Items: 'Header_Items',
+  })
+  - if (o.layout !== 'combined') {
+  +_Content({ 
+     layout: o.layout,
+     Input_Menu_Top:     'Input_Menu',
+     Input_Content_Top:  'Input_Content',
+     Others_Menu_Top:    'Others_Menu',
+     Others_Content_Top: 'Others_Content',
+     scripts: scripts,
+  })
+  - } else if (o.layout === 'combined') {
+  +_Content({ 
+     layout: 'combined',
+     All_Menu:    'All_Menu',
+     All_Content: 'All_Content',
+     scripts: scripts,
+  })
+  - }
+
+mixin Header_Items(o)
+  +_Header_Item({ title: 'Static', fa: 'database', id: 'header__data'})
+  +_Header_Item({ title: '',       fa: 'table',    id: 'header__id'})
+
+mixin Input_Menu(o)
+  +_Menu_Tab_Item({ id: 'input__html', title: 'HTML', fa: 'html5', class: 'active' })
+  +_Menu_Tab_Item({ id: 'input__css',  title: 'CSS',  fa: 'css3' })
+  +_Menu_Tab_Item({ id: 'input__js',   title: 'JS',   fa: 'jsfiddle' })
+
+mixin Input_Content(o)
+  +_Input_Tab({ id: 'html', class: 'active' })
+  +_Input_Tab({ id: 'css' })
+  +_Input_Tab({ id: 'js'  })
+
+mixin Others_Menu(o)
+  +_Menu_Tab_Item({ id: 'admin',  title: 'Data',    fa: 'database', class: 'active' })
+  +_Menu_Tab_Item({ id: 'output', title: 'Output',  fa: 'desktop' })
+  +_Menu_Tab_Item({ id: 'option', title: 'Options', fa: 'cogs' })
+
+mixin Others_Content(o)
+  //- @params  o:{ scripts:S }
+  +_Admin_Tab({ class: 'active' })
+  +_Output_Tab({  })
+  +_Option_Tab({ scripts: o.scripts })
+
+mixin _Content(o)
+  section.content
+    .row(style='margin-bottom: 12px')
+      +_Main_Buttons({ })
+    .row#content__layout
+      +_Content_Layout(o)
+    | <br><br><br><br><br><br><br>
+
+mixin _Content_Layout(o)
+  //- @params  o:{ layout:S }
+  - if (o.layout === 'split') {
+  +_Layout_Split(o)
+  - } else if (o.layout === 'split-vtab') {
+  +_Layout_SplitVtab(o)
+  - } else if (o.layout === 'combined') {
+  +_Layout_Combined(o)
+  - }
+
+mixin _Layout_Split(o)
+  .col-md-6(style='padding-right: 7px')
+    +_Input_Section(o)
+  .col-md-6(style='padding-left: 7px')
+    +_Others_Section(o)
+
+mixin _Layout_SplitVtab(o)
+  .col-sm-12
+    .col-sm-2(style='padding-left:0;padding-right:0')
+      ul.nav.nav-tabs.tabs-left
+        li.active
+          a(href='#tab__input', data-toggle='tab') Input
+        li
+          a(href='#tab__others', data-toggle='tab') Output + Others
+    .col-sm-10(style='padding-left:0;padding-right:0')
+      .tab-content
+        #tab__input.tab-pane.active
+          +_Input_Section(o)
+        #tab__others.tab-pane
+          +_Others_Section(o)
+
+mixin _Layout_Combined(o)
+  .col-md-12
+    .nav-tabs-custom
+      ul.nav.nav-tabs
+        +#{o.All_Menu || '__'}(o)
+      .tab-content
+        +#{o.All_Content || '__'}(o)
+
+mixin _Input_Section(o)
+  //- @params  o:{ 
+  //-   ?Input_Menu_Top:M, ?Input_Menu_Bottom:M, 
+  //-   ?Input_Content_Top:M, ?Input_Content_Bottom:M
+  //- }
+  .nav-tabs-custom
+    ul.nav.nav-tabs
+      +#{o.Input_Menu_Top || '__'}(o)
+      +#{o.Input_Menu_Bottom || '__'}(o)
+    .tab-content
+      +#{o.Input_Content_Top || '__'}(o)
+      +#{o.Input_Content_Bottom || '__'}(o)
+
+mixin _Others_Section(o)
+  //- @params  o:{ 
+  //-   ?Others_Menu_Top:M, ?Others_Menu_Bottom:M, 
+  //-   ?Others_Content_Top:M, ?Others_Content_Bottom:M,
+  //-   ?scripts:S
+  //- }
+  .nav-tabs-custom
+    ul.nav.nav-tabs
+      +#{o.Others_Menu_Top || '__'}(o)
+      +#{o.Others_Menu_Bottom || '__'}(o)
+    .tab-content
+      +#{o.Others_Content_Top || '__'}(o)
+      +#{o.Others_Content_Bottom || '__'}(o)
+
+mixin _Menu_Tab_Item(o)
+  //- @params  o:{ id:S, title:S, fa:S, ?class:S }
+  li(class='#{o.class || ""}')
+    a(href='#tab__#{o.id}', data-toggle='tab')
+      i(class='fa fa-#{o.fa}')
+      | &nbsp&nbsp #{o.title}
+
+mixin _Header(o)
+  //- @params  o:{ title:S, version:S, ?Header_Items:M }
+  section.content-header
+    h1
+      | &nbsp
+      i(class='fa fa-#{o.fa}')
+      | &nbsp#{o.title}
+      small #{o.version}
+    ol.breadcrumb
+      +#{o.Header_Items || '__' }(o.header_items || {})
+
+mixin _Header_Item(o)
+  //- @params  o:{ id:S, title:S }
+  li
+    i(class='fa fa-#{o.fa}')
+    | &nbsp&nbsp
+    span(id='#{o.id}') #{o.title}
+
+mixin _Form_Group(o)
+  //- @params  o:{ id:S, label:S }
+  .form-group
+    label.col-sm-2.control-label(for='#{o.id}') #{o.label}
+    .col-sm-10
+      input.form-control(type='text', id='#{o.id}')
+
+mixin __
+  //-
+

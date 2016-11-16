@@ -1,0 +1,24 @@
+doctype html
+html
+  - var version = global._meta['app'].version;
+  - var version_vendor = global._meta['app'].version_vendor;
+  head
+    meta(charset='utf-8')
+    title RCX
+    | 
+    | <!-- app-standalone-#{version}.html -->
+    style
+      include ../../dist/app/lib/vendors-0.70.0.css
+    style
+      include ../../dist/app/lib/bundle-0.70.0.css
+  body.skin-black-light.sidebar-mini
+    .wrapper
+      .content-wrapper(style='min-height: 906px;')
+        #app
+    script
+      include ../../dist/app/lib/vendors-0.70.0.js
+    script var app = {component: {}, meta: {}};
+    script
+      include ../../dist/app/lib/bundle-0.70.0.js
+    script app.component.init();
+    iframe(id='_form-target', name='_form-target', style='visibility:hidden;display:none')

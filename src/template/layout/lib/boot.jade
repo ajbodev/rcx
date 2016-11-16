@@ -1,0 +1,35 @@
+
+include boot/option/store.jade
+include boot/option/run.jade
+
+mixin _Option_Tab(o)
+  //- @params  o:{ scripts:{} }
+  #tab__option.tab-pane.fade.in
+    .row(style='padding-bottom: 5px;')
+      +_Option_Tab_Cmd
+    .row(style='height: 649px;')
+      +_Option_Tab_Menu({ })
+      +_Option_Tab_Content({ scripts: o.scripts })
+
+mixin _Option_Tab_Cmd(o)
+  .col-md-12
+    button#content__option__save.btn.btn-danger(type='button', disabled)
+      i.fa.fa-refresh
+
+mixin _Option_Tab_Content(o)
+  //- @params  o:{ scripts:{} }
+  .col-sm-10
+    .tab-content
+      +_Option_Tab_Content_Store({ })
+      +_Option_Tab_Content_Run({ scripts: o.scripts })
+
+mixin _Option_Tab_Menu(o)
+  .col-sm-2
+    ul.nav.nav-tabs.tabs-left
+      +_Option_Tab_Menu_Item({ title: 'Store',  href: 'store', class: 'active'})
+      +_Option_Tab_Menu_Item({ title: 'Run',    href: 'run' })
+
+mixin _Option_Tab_Menu_Item(o)
+  //- @params  o:{ title:S, href:S, ?class:S }
+  li(class='#{o.class}')
+    a(href='#tab__option__#{o.href}', data-toggle='tab') #{o.title}

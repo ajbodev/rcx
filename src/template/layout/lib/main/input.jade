@@ -1,0 +1,50 @@
+
+mixin _Input_Tab(o)
+  //- @params  o:{ id:S , ?class:S }
+  .tab-pane.fade.in(id='tab__input__#{o.id}', class='#{o.class || ""}')
+    .content__input__top
+      .content__input__top__create
+        button.btn.btn-default(id='content__input__#{o.id}__file__create', type='button', data-toggle='modal', data-target='#content__input__#{o.id}__file__create__modal')
+          i.fa.fa-plus
+      .content__input__top__file
+        select(id='content__input__#{o.id}__file')
+      .content__input__top__ext
+        select(id='content__input__#{o.id}__ext')
+      .content__input__top__destroy
+        button.btn.btn-btn.pull-right(id='content__input__#{o.id}__file__destroy', type='button')
+          i.fa.fa-trash
+    //-.row 
+      .col-md-1.col-sm-1.col-xs-12
+        button.btn.btn-default(id='content__input__#{o.id}__file__create', type='button', data-toggle='modal', data-target='#content__input__#{o.id}__file__create__modal')
+          i.fa.fa-plus
+      .col-md-8.col-sm-8.col-xs-12
+        select(id='content__input__#{o.id}__file')
+      .col-md-2.col-sm-2.col-xs-12(style='padding-left: 0; padding-right: 9px;')
+        select(id='content__input__#{o.id}__ext')
+      .col-md-1.col-sm-1.col-xs-12
+        button.btn.btn-danger.pull-right(id='content__input__#{o.id}__file__destroy', type='button')
+          i.fa.fa-trash
+    .row
+      .col-md-12.col-sm-12.col-xs-12
+        textarea(id='content__input__#{o.id}__editor')
+    +_Util_Tab_Buttons({ id: 'input__' + o.id })
+    +_Input_Tab_Create({ id: o.id })
+
+mixin _Input_Tab_Create(o)
+  //- @params  o:{ id:S }
+  .row
+    .modal.fade(id='content__input__#{o.id}__file__create__modal', tabindex='-1', role='dialog', aria-labelledby='#{o.id}Label', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-body
+            form.form-horizontal
+              .form-group
+                label.col-sm-2.control-label(for='content__input__#{o.id}__file__create__text') File
+                .col-sm-8
+                  input.form-control(type='text', id='content__input__#{o.id}__file__create__text')
+                .col-sm-2
+                  input.form-control(type='text', value='#{o.id}', disabled)
+              .form-group
+                label.col-sm-offset-2.col-sm-10
+                  button.btn.btn-default(type='button', id='content__input__#{o.id}__file__create__button')
+                    i.fa.fa-plus

@@ -1,0 +1,117 @@
+
+/* ? modal edit */
+
+.content__admin__top__select__edit, 
+.content__admin__top__select__clone,
+.content__admin__top__select__replace {
+  display: table;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.content__admin__top__select__edit__left, 
+.content__admin__top__select__clone__left,
+.content__admin__top__select__replace__left {
+  display: table-cell;
+  /*vertical-align: top;*/
+  width: 100px;
+}
+
+.content__admin__top__select__edit__left label,
+.content__admin__top__select__clone__left label,
+.content__admin__top__select__replace__left label {
+  float: right;
+  padding-right: 30px;
+}
+
+.content__admin__top__select__edit__mid, 
+.content__admin__top__select__clone__right,
+.content__admin__top__select__replace__right {
+  display: table-cell;
+  vertical-align: top;
+  float: left;
+  width: 100%;
+}
+
+.content__admin__top__select__edit__right {
+  display: table-cell;
+  vertical-align: top;
+  width: 1px;
+  padding-left: 14px;
+}
+
+.content__admin__top__select__clone__mid,
+.content__admin__top__select__replace__mid {
+  display: table-cell;
+  vertical-align: top;
+  width: 1px;
+  padding-right: 14px;
+}
+
+/* ? */
+
+.content__admin__top, .content__admin__bottom {
+  display: table;
+  width: 100%;
+  height: 44px;
+}
+
+.content__admin__bottom {
+  margin-top: 3px;
+  margin-bottom: -7px;
+}
+
+.content__admin__top__left,
+.content__admin__top__mid,
+.content__admin__top__right__aux,
+.content__admin__top__right,
+.content__admin__bottom__import-export,
+.content__admin__bottom__format,
+.content__admin__bottom__space,
+.content__admin__bottom__view
+{
+  display: table-cell;
+  vertical-align: top;
+}
+
+.content__admin__top__left, 
+.content__admin__bottom__import-export {
+  width: 94px;
+}
+
+.content__admin__top__right__aux {
+  width: 94px;
+}
+
+.content__input__top__mid, .content__admin__bottom__space {
+  float: left;
+  width: 100%;
+}
+
+.content__admin__bottom__format, .content__admin__bottom__view {
+  width: 120px;
+}
+
+.content__admin__top__right {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .content__admin__top, .content__admin__bottom {
+    display: block;
+  }
+  
+  .content__admin__top__mid {
+    float: left;
+    width: 100%;
+    padding-top: 8px;
+    padding-right: 0;
+  }
+  
+  .content__admin__top__right__aux,
+  .content__admin__bottom__format,
+  .content__admin__bottom__view {
+    float: left;
+    width: 100%;
+  }
+}

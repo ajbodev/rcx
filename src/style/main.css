@@ -1,0 +1,111 @@
+
+/* Top */
+
+.content__input__top, .content__output__top {
+  display: table;
+  width: 100%;
+  height: 44px;
+}
+
+.content__input__top__create, .content__output__top__urlhash-button,
+.content__input__top__file,   .content__output__top__urlhash,
+.content__input__top__ext,    .content__output__top__ext,
+.content__input__top__destroy
+{
+  display: table-cell;
+  vertical-align: top;
+}
+
+.content__input__top__create, .content__output__top__urlhash-button {
+  width: 50px;
+}
+
+.content__input__top__file, .content__output__top__urlhash {
+  float: left;
+  width: 100%;
+  padding-right: 13px;
+}
+
+.content__input__top__ext, .content__output__top__ext {
+  width: 120px;
+}
+
+.content__input__top__destroy {
+  width: 50px;
+}
+
+@media (max-width: 767px) {
+  .content__input__top, .content__output__top {
+    display: block;
+  }
+  
+  .content__input__top__file, .content__output__top__urlhash {
+    padding-top: 8px;
+    padding-right: 0;
+  }
+  
+  .content__input__top__ext, .content__output__top__ext {
+    float: left;
+    width: 100%;
+  }
+  
+  .content__input__top__destroy {
+    float: right; 
+    padding-bottom: 8px;
+  }
+}
+
+/* Bottom */
+
+.content__input__bottom, .content__output__bottom {
+  display: table;
+  width: 100%;
+  height: 44px;
+  margin-top: -12px;
+  margin-bottom: -8px;
+}
+
+.content__input__bottom__import-export, .content__output__bottom__import-export,
+.content__input__bottom__format,        .content__output__bottom__result,
+.content__input__bottom__lint,          .content__output__bottom__lint,
+.content__input__bottom__mode,          .content__output__bottom__mode
+{
+  display: table-cell;
+  vertical-align: top;
+}
+
+.content__input__bottom__import-export, .content__output__bottom__import-export {
+  width: 94px;
+}
+
+.content__input__bottom__format, .content__output__bottom__result {
+  width: 120px;
+}
+
+.content__input__bottom__lint, .content__output__bottom__lint {
+  float: left;
+  width: 100%;
+}
+
+.content__input__bottom__mode, .content__output__bottom__mode {
+  width: 185px;
+}
+
+@media (max-width: 767px) {
+  .content__input__bottom, .content__output__bottom {
+    display: block;
+  }
+  
+  .content__input__bottom__format, .content__output__bottom__result,
+  .content__input__bottom__mode,   .content__output__bottom__mode   {
+    float: left;
+    width: 100%;
+    padding-top: 8px;
+  }
+  
+  .content__input__bottom__lint, .content__output__bottom__lint {
+    width: 100%;
+    padding-top: 8px;
+    padding-right: 0;
+  }
+}
